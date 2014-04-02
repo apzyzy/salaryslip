@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @user.name
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Pan:
+  = @user.pan
+%p
+  %b Designation:
+  = @user.designation
+%p
+  %b Pf:
+  = @user.pf
+%p
+  %b Joined at:
+  = @user.joined_at
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

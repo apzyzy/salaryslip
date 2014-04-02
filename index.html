@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html ng-app="PaySlip">
+
+<head>
+  <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="mainController" ng-init="init()">
+
+  <ul>
+    <li ng-repeat="classes in results" class="{{classes.gsx$vu.$t}}">
+      <strong>{{classes.gsx$titre.$t}}</strong>
+      | Category : {{ classes.gsx$categorie.$t || 'N/A' }}
+    </li>
+  </ul>
+
+</body>
+
+</html>

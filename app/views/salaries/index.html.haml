@@ -1,0 +1,51 @@
+- model_class = Salary
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:basic)
+      %th= model_class.human_attribute_name(:hra)
+      %th= model_class.human_attribute_name(:children_allowance)
+      %th= model_class.human_attribute_name(:transport_allowance)
+      %th= model_class.human_attribute_name(:medical_allowance)
+      %th= model_class.human_attribute_name(:tech_research_allowance)
+      %th= model_class.human_attribute_name(:special_allowance)
+      %th= model_class.human_attribute_name(:internet_and_telephone)
+      %th= model_class.human_attribute_name(:pf_contribution_by_employer)
+      %th= model_class.human_attribute_name(:leave_travel_allowance)
+      %th= model_class.human_attribute_name(:gross_salary)
+      %th= model_class.human_attribute_name(:tds)
+      %th= model_class.human_attribute_name(:pf)
+      %th= model_class.human_attribute_name(:advance)
+      %th= model_class.human_attribute_name(:net_payable)
+      %th= model_class.human_attribute_name(:user_id)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @salaries.each do |salary|
+      %tr
+        %td= link_to salary.id, salary_path(salary)
+        %td= salary.name
+        %td= salary.basic
+        %td= salary.hra
+        %td= salary.children_allowance
+        %td= salary.transport_allowance
+        %td= salary.medical_allowance
+        %td= salary.tech_research_allowance
+        %td= salary.special_allowance
+        %td= salary.internet_and_telephone
+        %td= salary.pf_contribution_by_employer
+        %td= salary.leave_travel_allowance
+        %td= salary.gross_salary
+        %td= salary.tds
+        %td= salary.pf
+        %td= salary.advance
+        %td= salary.net_payable
+        %td= salary.user_id
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_salary_path(salary), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), salary_path(salary), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_salary_path, :class => 'btn btn-primary'

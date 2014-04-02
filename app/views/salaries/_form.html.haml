@@ -1,0 +1,72 @@
+= form_for @salary, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :basic, :class => 'control-label'
+    .controls
+      = f.text_field :basic, :class => 'text_field'
+  .control-group
+    = f.label :hra, :class => 'control-label'
+    .controls
+      = f.text_field :hra, :class => 'text_field'
+  .control-group
+    = f.label :children_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :children_allowance, :class => 'text_field'
+  .control-group
+    = f.label :transport_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :transport_allowance, :class => 'text_field'
+  .control-group
+    = f.label :medical_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :medical_allowance, :class => 'text_field'
+  .control-group
+    = f.label :tech_research_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :tech_research_allowance, :class => 'text_field'
+  .control-group
+    = f.label :special_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :special_allowance, :class => 'text_field'
+  .control-group
+    = f.label :internet_and_telephone, :class => 'control-label'
+    .controls
+      = f.text_field :internet_and_telephone, :class => 'text_field'
+  .control-group
+    = f.label :pf_contribution_by_employer, :class => 'control-label'
+    .controls
+      = f.text_field :pf_contribution_by_employer, :class => 'text_field'
+  .control-group
+    = f.label :leave_travel_allowance, :class => 'control-label'
+    .controls
+      = f.text_field :leave_travel_allowance, :class => 'text_field'
+  .control-group
+    = f.label :gross_salary, :class => 'control-label'
+    .controls
+      = f.text_field :gross_salary, :class => 'text_field'
+  .control-group
+    = f.label :tds, :class => 'control-label'
+    .controls
+      = f.text_field :tds, :class => 'text_field'
+  .control-group
+    = f.label :pf, :class => 'control-label'
+    .controls
+      = f.text_field :pf, :class => 'text_field'
+  .control-group
+    = f.label :advance, :class => 'control-label'
+    .controls
+      = f.text_field :advance, :class => 'text_field'
+  .control-group
+    = f.label :net_payable, :class => 'control-label'
+    .controls
+      = f.text_field :net_payable, :class => 'text_field'
+  .control-group
+    = f.label :user_id, :class => 'control-label'
+    .controls
+      = f.number_field :user_id, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), salaries_path, :class => 'btn'

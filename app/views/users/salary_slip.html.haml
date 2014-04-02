@@ -1,0 +1,114 @@
+%html
+  %head
+    :css
+      table tr td{border: 1px solid #000000;}
+      table{width: 100%;}
+      .center {text-align: center;}
+      .strong {font-weight:bold;}
+
+%table
+  %tr
+    %td{:style => "text-align:center"}
+      SRIJAN TECHNOLOGIES PVT LTD
+      %br
+      8A&8E,Vandana Building,11 Tolstoy Road
+      %br
+      Connaught Place,New Delhi- 110001
+  %tr
+    %td
+      Pay slip For the Month of #{Time.now.strftime('%B %Y')}
+  %tr
+    %td
+      %table
+        %tr
+          %td Name
+          %td
+            = @user.name
+          %td Date of Joining
+          %td
+            = @user.joined_at
+        %tr
+          %td Designation
+          %td
+            = @user.designation
+          %td Department
+          %td Not Available!!
+        %tr
+          %td PF Number
+          %td
+            = @user.pf
+          %td PAN
+          %td
+            = @user.pan
+        %tr
+          %td.center.strong{:colspan => 2} Earnings
+          %td.center.strong{:colspan => 2} Deductions
+        %tr
+          %td Description
+          %td Amount
+          %td Description
+          %td Amount
+        %tr
+          %td BASIC
+          %td
+            = @salary.basic
+          %td TDS
+          %td
+            = @salary.tds
+        %tr
+          %td HRA
+          %td
+            = @salary.hra
+          %td TDS
+          %td
+            = @salary.pf
+        %tr
+          %td Transport Allowance
+          %td
+            = @salary.transport_allowance
+          %td Advance
+          %td
+            = @salary.advance
+        %tr
+          %td Medical Allowance
+          %td
+            = @salary.medical_allowance
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td Children Allowance
+          %td
+            = @salary.children_allowance
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td Technology Research
+          %td
+            = @salary.tech_research_allowance
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td Leave Travel Allowance
+          %td
+            = @salary.leave_travel_allowance
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td Internet and Telephone
+          %td
+            = @salary.internet_and_telephone
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td Special Allowance
+          %td
+            = @salary.special_allowance
+          %td &nbsp;
+          %td &nbsp;
+        %tr
+          %td.strong GROSS PAY
+          %td
+            = @salary.gross_salary
+          %td.strong Net Pay
+          %td
+            = @salary.net_payable

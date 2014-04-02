@@ -1,0 +1,77 @@
+- model_class = Salary
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @salary.name
+%p
+  %strong= model_class.human_attribute_name(:basic) + ':'
+  %br
+  = @salary.basic
+%p
+  %strong= model_class.human_attribute_name(:hra) + ':'
+  %br
+  = @salary.hra
+%p
+  %strong= model_class.human_attribute_name(:children_allowance) + ':'
+  %br
+  = @salary.children_allowance
+%p
+  %strong= model_class.human_attribute_name(:transport_allowance) + ':'
+  %br
+  = @salary.transport_allowance
+%p
+  %strong= model_class.human_attribute_name(:medical_allowance) + ':'
+  %br
+  = @salary.medical_allowance
+%p
+  %strong= model_class.human_attribute_name(:tech_research_allowance) + ':'
+  %br
+  = @salary.tech_research_allowance
+%p
+  %strong= model_class.human_attribute_name(:special_allowance) + ':'
+  %br
+  = @salary.special_allowance
+%p
+  %strong= model_class.human_attribute_name(:internet_and_telephone) + ':'
+  %br
+  = @salary.internet_and_telephone
+%p
+  %strong= model_class.human_attribute_name(:pf_contribution_by_employer) + ':'
+  %br
+  = @salary.pf_contribution_by_employer
+%p
+  %strong= model_class.human_attribute_name(:leave_travel_allowance) + ':'
+  %br
+  = @salary.leave_travel_allowance
+%p
+  %strong= model_class.human_attribute_name(:gross_salary) + ':'
+  %br
+  = @salary.gross_salary
+%p
+  %strong= model_class.human_attribute_name(:tds) + ':'
+  %br
+  = @salary.tds
+%p
+  %strong= model_class.human_attribute_name(:pf) + ':'
+  %br
+  = @salary.pf
+%p
+  %strong= model_class.human_attribute_name(:advance) + ':'
+  %br
+  = @salary.advance
+%p
+  %strong= model_class.human_attribute_name(:net_payable) + ':'
+  %br
+  = @salary.net_payable
+%p
+  %strong= model_class.human_attribute_name(:user_id) + ':'
+  %br
+  = @salary.user_id
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), salaries_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_salary_path(@salary), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), salary_path(@salary), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
